@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+
+\usepackage{fullpage}
+\usepackage{multicol,multirow}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection.}{0.3em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection.}{0.3em}{}
+
+\titlespacing{\section}{0pt}{*2}{*2}
+\titlespacing{\subsection}{0pt}{*1}{*1}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\usepackage{listings}
+\lstloadlanguages{Lisp}
+\lstset{extendedchars=false,
+	breaklines=true,
+	breakatwhitespace=true,
+	keepspaces = true,
+	tabsize=2
+}
+\begin{document}
+
+\section*{Отчет по лабораторной работе № 5 \\
+по курсу \guillemotleft Функциональное программирование\guillemotright}
+\begin{flushright}
+Студент группы М8О-307-19 МАИ \textit{Тимофеев Алексей Владимирович}, \textnumero 21 по списку \\
+\makebox[7cm]{Контакты: {\tt TimofeevAV8f@yandex.ru} \hfill} \\
+\makebox[7cm]{Работа выполнена: 29.05.2022 \hfill} \\
+\ \\
+Преподаватель: Иванов Дмитрий Анатольевич, доц. каф. 806 \\
+\makebox[7cm]{Отчет сдан: \hfill} \\
+\makebox[7cm]{Итоговая оценка: \hfill} \\
+\makebox[7cm]{Подпись преподавателя: \hfill} \\
+
+\end{flushright}
+
+\section{Тема работы}
+Обобщённые функции, методы и классы объектов.
+
+\section{Цель работы}
+Цель работы: научиться определять простейшие классы, порождать экземпляры классов, считывать и изменять значения слотов, научиться определять обобщённые функции и методы.
+
+\section{Задание (Вариант 5.25)}
+
+Дан экземпляр класса triangle, причем все вершины треугольника могут быть заданы как декартовыми координатами (экземплярами класса cart), так и полярными (экземплярами класса polar).\\
+
+Задание: Определить обычную функцию медиана, возвращающую объект-отрезок (экземпляр класса line), являющийся медианой первого угла vertex1. Концы результирующего отрезка могут быть получены либо в декартовых, либо в полярных координатах.\\
+
+(setq tri (make-instance 'triangle
+
+		\hspace{52pt}:1 (make-instance 'cart-или-polar ...)
+
+		\hspace{52pt}:2 (make-instance 'cart-или-polar ...)
+
+		\hspace{52pt}:3 (make-instance 'cart-или-polar ...)))
+
+(медиана tri) => [ОТРЕЗОК ...]\\
+
+
+\section{Оборудование студента}
+Процессор Intel Core i5-10600K @ 4.10GHz, память: 16 Gb, разрядность системы: 64.
+
+\section{Программное обеспечение}
+ОС Ubuntu 20.04.4 LTS, комилятор GNU CLISP 2.49.92, текстовый редактор VS Code
+
+\pagebreak
+\section{Идея, метод, алгоритм}
+Я взял с сайта нашего курса объявление классов cart, polar, line, triangle, а также метод для
+печати каждого класса print-object. Далее написал функцию median работающую только с cart. Так как треугольник в cart обрабатывать я уже умею, было решено сделать функцию, которая преобразует декартовы в полярные координаты.
+
+\section{Сценарий выполнения работы}
+
+\section{Распечатка программы и её результаты}
+
+\subsection{Исходный код}
+\lstinputlisting{./lab5.lisp}
+
+\pagebreak
+\subsection{Результаты работы}
+\lstinputlisting{./log5.txt}
+
+\pagebreak
+\section{Дневник отладки}
+\begin{tabular}{|p{50pt}|p{80pt}|p{140pt}|p{140pt}|}
+\hline
+Дата & Событие & Действие по исправлению & Примечание \\
+\hline
+\end{tabular}
+
+\section{Замечания автора по существу работы}
+Программа работает с небольшой погрешностью в методе расчета полярных координат.\\
+Возможно это из-за внутренней реализации тригонометрических функций.
+
+
+\section{Выводы}
+При выполнении лабораторной работы № 5 я научился определять простейшие классы, порождать экземпляры классов, считывать и изменять значения слотов,а также научился определять обобщённые функции и методы.
+
+
+
+
+\end{document}

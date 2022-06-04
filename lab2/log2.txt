@@ -1,0 +1,10 @@
+[1]> (load "laba2.lisp")
+;; Loading file laba2.lisp ...
+;; Loaded file laba2.lisp
+#P"/mnt/d/education/education/FP/Mylab/lab2/laba2.lisp"
+[2]> (split '(a a))
+(A A)
+[3]> (split '("a" "a" (1 5 8) "d" 5 ((("b")))))
+("a" "a" 1 5 8 "d" 5 "b")
+[4]> (split '((("g" 5 5 ((k))) 7 )))
+("g" 5 5 K 7)

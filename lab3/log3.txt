@@ -1,0 +1,26 @@
+[1]> (load "lab3.lisp")
+;; Loading file lab3.lisp ...
+;; Loaded file lab3.lisp
+#P"/mnt/d/education/education/FP/Mylab/lab3/lab3.lisp"
+[2]> (mainFun m4 #(1) 0 "~3d")
+  0
+
+  1  0
+NIL
+[3]> (mainFun m4 u4 0 "~3d")
+  0
+
+  1  0
+NIL
+[4]> (extend-matrix m4 #(1) 1)
+#2A((0 1))
+[5]> (extend-matrix m4 #(1) 0)
+#2A((1 0))
+[6]> (extend-matrix m4 u4 0)
+#2A((1 0))
+[7]> (extend-matrix m2 u2 2)
+#2A((0 0 1 0 0) (0 0 1 0 0))
+[8]> (extend-matrix m2 u2 4)
+#2A((0 0 0 0 1) (0 0 0 0 1))
+[9]>
+Bye.

@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\usepackage{fullpage}
+\usepackage{multicol,multirow}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection.}{0.3em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection.}{0.3em}{}
+
+\titlespacing{\section}{0pt}{*2}{*2}
+\titlespacing{\subsection}{0pt}{*1}{*1}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\usepackage{listings}
+\lstloadlanguages{Lisp}
+\lstset{extendedchars=false,
+	breaklines=true,
+	breakatwhitespace=true,
+	keepspaces = true,
+	tabsize=2
+}
+\begin{document}
+
+\section*{Отчет по лабораторной работе № 2 \\
+по курсу \guillemotleft Функциональное программирование\guillemotright}
+\begin{flushright}
+Студент группы М8О-307-19 МАИ \textit{Тимофеев Алексей Владимирович}, \textnumero 21 по списку \\
+\makebox[7cm]{Контакты: {\tt TimofeevAV8f@yandex.ru} \hfill} \\
+\makebox[7cm]{Работа выполнена: 13.04.2022 \hfill} \\
+\ \\
+Преподаватель: Иванов Дмитрий Анатольевич, доц. каф. 806 \\
+\makebox[7cm]{Отчет сдан: \hfill} \\
+\makebox[7cm]{Итоговая оценка: \hfill} \\
+\makebox[7cm]{Подпись преподавателя: \hfill} \\
+
+\end{flushright}
+
+\section{Тема работы}
+Простейшие функции работы со списками Коммон Лисп.
+
+\section{Цель работы}
+Научиться конструировать списки, находить элемент в списке, использовать схему линейной и древовидной рекурсии для обхода и реконструкции плоских списков и деревьев.
+
+\section{Задание (Вариант 2.39)}
+Запрограммируйте рекурсивно на языке Коммон Лисп функцию набор (х), принимающую один аргумент - список х с подсписками любой глубины.\\
+
+Функция должна возвращать список атомов (отличных от NIL), обладающий тем свойством, что все атомы, появляющиеся в х, появляются в результирующем списке в том же самом порядке.\\
+
+
+\section{Оборудование студента}
+Процессор Intel Core i5-10600K @ 4.10GHz, память: 16 Gb, разрядность системы: 64.
+
+\section{Программное обеспечение}
+ОС Ubuntu 20.04.4 LTS, комилятор GNU CLISP 2.49.92, текстовый редактор VS Code
+
+\pagebreak
+\section{Идея, метод, алгоритм}
+Функция получает список списков, далее идет проверка является ли список пустым, если нет проверяется атом это или список. Если атом он включается в результирующий список, если это список то рекурсивно доходим до его атомов.
+
+\section{Сценарий выполнения работы}
+
+\section{Распечатка программы и её результаты}
+
+\subsection{Исходный код}
+\lstinputlisting{./laba2.lisp}
+
+\pagebreak
+\subsection{Результаты работы}
+\lstinputlisting{./log2.txt}
+
+\pagebreak
+\section{Дневник отладки}
+\begin{tabular}{|p{50pt}|p{80pt}|p{140pt}|p{140pt}|}
+\hline
+Дата & Событие & Действие по исправлению & Примечание \\
+\hline
+\end{tabular}
+
+\section{Замечания автора по существу работы}
+В задании не оганичена длинна списка, поэтому если задать список из очень большого количества элементов, может произойти переполнение стека, так как программа завязана на рекурсии. С большей вероятностью это может проявиться на слабых системах (слабых в смысле железа).
+
+
+\section{Выводы}
+При выполнении лабораторной работы № 2 я познакомился со списками языка Common Lisp. Также я потрентровался писать рекурсию. Реализация рекурсии в Common Lisp намного проще чем в привычных нам Си образных языках.
+
+
+
+
+\end{document}

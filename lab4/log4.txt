@@ -1,0 +1,12 @@
+[1]> (load "lab4.lisp")
+;; Loading file lab4.lisp ...
+;; Loaded file lab4.lisp
+#P"/mnt/d/education/education/FP/Mylab/lab4/lab4.lisp"
+[2]> (form-to-postfix '(+ (* b b) (- (* 4 a c))))
+"B B * 0 4 A C * * - +"
+[3]> (form-to-postfix '(* (* a b) (* c (* d e))))
+"A B * C D E * * *"
+[4]> (form-to-postfix '(- (+ A (- (* B C))) D) )
+"A 0 B C * - + D -"
+[5]> (form-to-postfix '(* (/ a) c) )
+"1 A / C *"

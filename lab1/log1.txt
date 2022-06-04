@@ -1,0 +1,25 @@
+>(load "lab1.lisp")
+;; Loading "lab1.lisp"
+;; Finished loading "lab1.lisp"
+T
+
+>(castle-moves 3 5 2 7)
+
+2
+5
+
+>(castle-moves 2 5 2 7)
+
+T
+
+>(castle-moves 1 1 2 7)
+
+2
+1
+
+>(castle-moves 3 1 7 8)
+
+7
+1
+
+>

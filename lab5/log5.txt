@@ -1,0 +1,17 @@
+[1]> (load "lab5.lisp")
+;; Loading file lab5.lisp ...
+;; Loaded file lab5.lisp
+#P"/mnt/d/education/education/FP/Mylab/lab5/lab5.lisp"
+[2]> (setq triangleCartesian1 (make-instance 'triangle :1 (make-instance 'cart :x 2 :y 8)
+:2 (make-instance 'cart :x 2 :y 3)
+:3 (make-instance 'cart :x 6 :y 6)))
+[TRIANGLE [CART x 2 y 8] [CART x 2 y 3] [CART x 6 y 6]]
+[3]> (setq trianglePolar2 (make-instance 'triangle
+           :1 (make-instance 'polar :radius (radius (vertex1 triangleCartesian1)) :angle (angle (vertex1 triangleCartesian1)))
+           :2 (make-instance 'polar :radius (radius (vertex2 triangleCartesian1)) :angle (angle (vertex2 triangleCartesian1)))
+           :3 (make-instance 'polar :radius (radius (vertex3 triangleCartesian1)) :angle (angle (vertex3 triangleCartesian1)))))
+[TRIANGLE [POLAR radius 8.246211 angle 1.3258177] [POLAR radius 3.6055512 angle 0.9827938] [POLAR radius 8.485281 angle 0.7853981]]
+[4]> (median triangleCartesian1)
+[SEGMENT [CART x 2 y 8] [CART x 4 y 9/2]]
+[5]> (median trianglePolar2)
+[SEGMENT [CART x 1.9999996 y 7.9999995] [CART x 4.0 y 4.5]]
